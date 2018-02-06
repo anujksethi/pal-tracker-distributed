@@ -1,0 +1,6 @@
+rootProject.name = "PlatformServices"
+
+include "EurekaServer"
+include "OAuthServer"
+include "ConfigServer"
+include "HystrixDashboard"
