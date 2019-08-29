@@ -4,7 +4,7 @@ using Steeltoe.CircuitBreaker.Hystrix;
 
 namespace Backlog
 {
-    public class GetProjectCommand : HystrixCommand<ProjectInfo>
+   public class GetProjectCommand : HystrixCommand<ProjectInfo>
     {
         private readonly Func<long, Task<ProjectInfo>> _getProjectFn;
         private readonly long _projectId;
