@@ -4,10 +4,8 @@ applications:
   instances: 1
   memory: 256M
   routes:
-  - route: pal-dist-timesheets.cfapps.io
+  - route: timesheets-shiva.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.1/publish
-  # env:
-  #   REGISTRATION_SERVER_ENDPOINT: https://pal-dist-registration.cfapps.io
   services:
   - tracker-timesheets-database
   - tracker-service-registry
