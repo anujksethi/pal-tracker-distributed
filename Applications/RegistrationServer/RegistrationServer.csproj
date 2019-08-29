@@ -11,6 +11,7 @@
     <PackageReference Include="Steeltoe.CircuitBreaker.Hystrix.MetricsStreamCore" Version="2.1.1" />
     <PackageReference Include="Steeltoe.CircuitBreaker.HystrixCore" Version="2.1.1" />
     <PackageReference Include="Steeltoe.Extensions.Configuration.CloudFoundryCore" Version="2.1.1" />
+    <PackageReference Include="Steeltoe.Security.Authentication.CloudFoundryCore" Version="2.1.1" />
     <ProjectReference Include="../../Components/Accounts/Accounts.csproj" />
     <ProjectReference Include="../../Components/Projects/Projects.csproj" />
     <ProjectReference Include="../../Components/Users/Users.csproj" />
