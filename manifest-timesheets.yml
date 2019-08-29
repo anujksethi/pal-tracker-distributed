@@ -6,7 +6,6 @@ applications:
   routes:
   - route: timesheets-shiva.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-shiva.cfapps.io/
   services:
   - tracker-timesheets-database
+  - tracker-service-registry

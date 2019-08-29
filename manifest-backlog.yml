@@ -6,7 +6,6 @@ applications:
   routes:
   - route: backlog-shiva.cfapps.io
   path: Applications/BacklogServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-shiva.cfapps.io/
   services:
   - tracker-backlog-database
+  - tracker-service-registry
