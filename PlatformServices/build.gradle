@@ -1,0 +1,31 @@
+buildscript {
+    ext {
+        springBootVersion = "1.5.3.RELEASE"
+        springCloudDependenciesVersion = "Camden.SR6"
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
+}
+
+subprojects {
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudDependenciesVersion"
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}

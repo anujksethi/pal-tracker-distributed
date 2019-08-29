@@ -1,0 +1,11 @@
+---
+applications:
+- name: tracker-registration
+  instances: 1
+  memory: 256M
+  routes:
+  - route: pal-dist-registration.cfapps.io
+  path: Applications/RegistrationServer/bin/Release/netcoreapp2.1/publish
+  services:
+  - tracker-registration-database
+  - tracker-service-registry

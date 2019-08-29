@@ -1,0 +1,15 @@
+---
+applications:
+- name: tracker-backlog
+  instances: 1
+  memory: 256M
+  routes:
+  - route: pal-dist-backlog.cfapps.io
+  path: Applications/BacklogServer/bin/Release/netcoreapp2.1/publish
+  # env:
+  #   REGISTRATION_SERVER_ENDPOINT: https://pal-dist-registration.cfapps.io
+  services:
+  - tracker-backlog-database
+  - tracker-service-registry
+  - tracker-circuit-breaker-dashboard
+  - tracker-amqp
