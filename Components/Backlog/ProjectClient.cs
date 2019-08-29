@@ -5,11 +5,11 @@ using Microsoft.Extensions.Logging;
 ﻿using System.Collections.Generic;
 namespace Backlog
 {
-    public class ProjectClient : IProjectClient
+     public class ProjectClient : IProjectClient
     {
         private readonly HttpClient _client;
         private readonly ILogger<ProjectClient> _logger;
-         private readonly IDictionary<long, ProjectInfo> _projectCache = new Dictionary<long, ProjectInfo>();
+        private readonly IDictionary<long, ProjectInfo> _projectCache = new Dictionary<long, ProjectInfo>();
 
         public ProjectClient(HttpClient client, ILogger<ProjectClient> logger)
         {

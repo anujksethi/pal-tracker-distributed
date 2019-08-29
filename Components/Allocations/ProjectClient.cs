@@ -5,19 +5,19 @@ using Microsoft.Extensions.Logging;
 ﻿using System.Collections.Generic;
 namespace Allocations
 {
-    public class ProjectClient : IProjectClient
+     public class ProjectClient : IProjectClient
     {
         private readonly HttpClient _client;
         private readonly ILogger<ProjectClient> _logger;
-          private readonly IDictionary<long, ProjectInfo> _projectCache = new Dictionary<long, ProjectInfo>();
+        private readonly IDictionary<long, ProjectInfo> _projectCache = new Dictionary<long, ProjectInfo>();
 
-        public ProjectClient(HttpClient client, ILogger<ProjectClient> logger )
+        public ProjectClient(HttpClient client, ILogger<ProjectClient> logger)
         {
             _client = client;
             _logger = logger;
         }
 
-       public async Task<ProjectInfo> Get(long projectId) =>
+        public async Task<ProjectInfo> Get(long projectId) =>
             await new GetProjectCommand(DoGet, DoGetFromCache, projectId).ExecuteAsync();
 
         private async Task<ProjectInfo> DoGet(long projectId)
